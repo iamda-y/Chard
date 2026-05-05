@@ -282,6 +282,8 @@ alias ffa='fastfetch -c all.jsonc'
 alias gparted='/bin/chard_gparted'
 # Heroic
 alias heroic='/bin/chard_heroic'
+# Appfinder
+alias xfce4-appfinder='/bin/chard_appfinder'
 # Bazaar
 alias bazaar='/bin/chard_bazaar'
 # GPU Screen Recorder Cli
