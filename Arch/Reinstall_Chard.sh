@@ -1131,7 +1131,7 @@ sudo chmod +x $CHARD_ROOT/usr/local/bubblepatch/bin/uname
                 
                     sudo -u "$USER" bash -c "
                         source \$HOME/.bashrc 2>/dev/null
-                        sudo chown -R 1000:1000 \$HOME 2>/dev/null
+                        #sudo chown -R 1000:1000 \$HOME 2>/dev/null
                         cd \$HOME
                         sudo rm /etc/pipewire/pipewire.conf.d/crostini-audio.conf 2>/dev/null
                         sudo mv /usr/share/libalpm/hooks/90-packagekit-refresh.hook /usr/share/libalpm/hooks/90-packagekit-refresh.hook.disabled 2>/dev/null
