@@ -1974,12 +1974,22 @@ sudo chmod +x "/bin/chard_firefox"
 
 sudo tee "/bin/chard_discord" >/dev/null <<'EOF'
 #!/bin/bash
-DISCORD_DIR="$HOME/.config/discord"
-if [ -d "$DISCORD_DIR" ]; then
-    find "$DISCORD_DIR" -type f -name chrome-sandbox 2>/dev/null \
-        -exec chown root:root {} \; \
-        -exec chmod 4755 {} \; 2>/dev/null || true
-fi
+fix_sandbox() {
+    for base in \
+        "$HOME/.config/discord" \
+        "$HOME/.local/share/discord" \
+        "/home/chronos/.config/discord" \
+        "/home/chronos/user/.config/discord"
+    do
+        [ -d "$base" ] || continue
+        find "$base" -type f -name chrome-sandbox 2>/dev/null | while read -r sb; do
+            sudo chown root:root "$sb" 2>/dev/null || true
+            sudo chmod 4755 "$sb" 2>/dev/null || true
+        done
+    done
+}
+
+fix_sandbox
 exec /usr/bin/discord "$@"
 EOF
 
