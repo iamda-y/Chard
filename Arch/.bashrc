@@ -284,6 +284,8 @@ alias gparted='/bin/chard_gparted'
 alias heroic='/bin/chard_heroic'
 # Appfinder
 alias xfce4-appfinder='/bin/chard_appfinder'
+# Discord
+alias discord='/bin/chard_discord'
 # Bazaar
 alias bazaar='/bin/chard_bazaar'
 # GPU Screen Recorder Cli
