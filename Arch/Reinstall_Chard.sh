@@ -781,16 +781,16 @@ EOF
 
 sudo chmod +x "$CHARD_ROOT/bin/chard_discord"
 
-sudo tee "$CHARD_ROOT/bin/chard_appfinder" >/dev/null <<'EOF'
+sudo tee "$CHARD_ROOT/bin/chard_heroic" >/dev/null <<'EOF'
 #!/bin/bash
 sudo chown root:root /opt/Heroic/chrome-sandbox
 sudo chmod 4755 /opt/Heroic/chrome-sandbox
-exec /usr/bin/heroic "$@"
+exec /usr/bin/heroic "$@
 EOF
 
 sudo chmod +x "$CHARD_ROOT/bin/chard_heroic"
 
-sudo tee "$CHARD_ROOT/bin/chard_heroic" >/dev/null <<'EOF'
+sudo tee "$CHARD_ROOT/bin/chard_appfinder" >/dev/null <<'EOF'
 #!/bin/bash
 sudo chown root:root /usr/bin/xfce4-appfinder
 sudo chmod 4755 /usr/bin/xfce4-appfinder
