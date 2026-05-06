@@ -768,6 +768,19 @@ EOF
 
 sudo chmod +x "$CHARD_ROOT/bin/chard_firefox"
 
+sudo tee "$CHARD_ROOT/bin/chard_discord" >/dev/null <<'EOF'
+#!/bin/bash
+DISCORD_DIR="$HOME/.config/discord"
+if [ -d "$DISCORD_DIR" ]; then
+    find "$DISCORD_DIR" -type f -name chrome-sandbox 2>/dev/null \
+        -exec chown root:root {} \; \
+        -exec chmod 4755 {} \; 2>/dev/null || true
+fi
+exec /usr/bin/discord "$@"
+EOF
+
+sudo chmod +x "$CHARD_ROOT/bin/chard_discord"
+
 sudo tee "$CHARD_ROOT/bin/chard_appfinder" >/dev/null <<'EOF'
 #!/bin/bash
 sudo chown root:root /opt/Heroic/chrome-sandbox
