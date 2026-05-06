@@ -1996,8 +1996,7 @@ sudo chmod +x /bin/chard_heroic
 
 sudo tee "/bin/chard_appfinder" >/dev/null <<'EOF'
 #!/bin/bash
-sudo chown root:root /usr/bin/xfce4-appfinder
-sudo chmod 4755 /usr/bin/xfce4-appfinder
+sudo chmod u-s,g-s /usr/bin/xfce4-appfinder
 exec /usr/bin/xfce4-appfinder "$@"
 EOF
 
