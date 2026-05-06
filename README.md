@@ -396,7 +396,7 @@ Added chard_mount and chard_unmount commands. Enabled KVM kernel flag. Added GPa
 - 0.38: `Downgrading Flatpak to fix it. The recent patch made it incompatible with Chard. Added Sober wrapper to automatically fix text issue. Added dbus-launch initialization on startup to fix Thunar not opening properly. Attempting to fix language not being properly set on fresh install.` <br><br>
 - 0.39: `Downgrading bwrap to 0.11.1 to fix issue. Days added "GPU Screen Recorder" app support. Added downgrading bwrap and flatpak into reinstaller.`
 <br><br>
-- 0.40 (in progress): `Improved gpu screen recorder installation script.` <br><br>
+- 0.40 (in progress): `Improved gpu screen recorder installation script. Fixed Discord and Heroic, thanks to VALID for reporting.` <br><br>
 
 
 ### Acknowledgements - This project would not exist without the help and support from the ChromeOS community. 
@@ -414,5 +414,5 @@ Added chard_mount and chard_unmount commands. Enabled KVM kernel flag. Added GPa
 - *nobody067481* - Found bugs with installer and tested a lot of emulators.
 - *DarkDonkey* - Testing QEMU and working on improving performance.
 - *Quince* - Recommending GUI apps that work with Chard.
-- *VALID* - Reporting Flatpak bugs.
+- *VALID* - Reporting Flatpak bugs, discord issues, heroic bug, and more. 
 - *Rein* - Reporting Bubbelwrap breaking everything. 
